@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import Nav from './components/Nav';
+import TransactionList from './components/TransactionList';
+import Distribution from './components/Distribution';
+import Spending from './components/Spending';
+import YearMonthSelector from './components/YearMonthSelector';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Nav heading="Accounts"/>
+      <YearMonthSelector />
+      <Distribution />
+      <Spending />
+      <TransactionList />
     </div>
   );
 }
