@@ -10,13 +10,13 @@ export const data = [
 
 export default function Spending() {
     return (
-        <>
+        <section id="spending">
             <Chart
                 chartType="ColumnChart"
                 width="100%"
                 height="400px"
                 data={data}
             />
-        </>
+        </section>
     )
 }

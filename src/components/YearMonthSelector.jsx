@@ -1,6 +1,6 @@
 export default function YearMonthSelector() {
     return (
-        <>
+        <section id="date-selector">
             <label htmlFor="year">Year</label>
             <select name="year" id="year">
                 <option value="">
@@ -31,6 +31,6 @@ export default function YearMonthSelector() {
                     3
                 </option>
             </select>
-        </>
+        </section>
     )
 }

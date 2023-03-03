@@ -6,6 +6,7 @@ import Spending from './components/Spending';
 import YearMonthSelector from './components/YearMonthSelector';
 import MenuList from './components/MenuList';
 import { useState } from 'react';
+import { BasicTable } from './components/BasicTable';
 
 
 function App() {
@@ -19,10 +20,12 @@ function App() {
     <>
       <Nav onMenuClick={toggleMenu} heading="Accounts"/>
       { menuView ? <MenuList /> : null}
-      <YearMonthSelector />
-      <Distribution />
-      <Spending />
-      <TransactionList />
+      <main>
+        <YearMonthSelector />
+        <Distribution />
+        <Spending />
+        <BasicTable />
+      </main>
     </>
   );
 }

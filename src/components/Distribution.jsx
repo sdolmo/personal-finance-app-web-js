@@ -15,7 +15,7 @@ export const options = {
 
 export default function Distribution() {
     return (
-        <>
+        <section id="distribution">
             <Chart
                 chartType="PieChart"
                 data={data}
@@ -23,6 +23,6 @@ export default function Distribution() {
                 width={"100%"}
                 height={"400px"}
             />
-        </>
+        </section>
     )
 }
