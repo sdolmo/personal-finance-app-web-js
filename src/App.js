@@ -7,6 +7,7 @@ import YearMonthSelector from './components/YearMonthSelector';
 import MenuList from './components/MenuList';
 import { useState } from 'react';
 import { BasicTable } from './components/BasicTable';
+import SimplePlaidLink from './components/Link';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Nav onMenuClick={toggleMenu} heading="Accounts"/>
       { menuView ? <MenuList /> : null}
       <main>
+        <SimplePlaidLink />
         <YearMonthSelector />
         <Distribution />
         <Spending />
