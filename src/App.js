@@ -1,20 +1,18 @@
-import './App.css';
-import Nav from './components/Nav';
-import TransactionList from './components/TransactionList';
-import Distribution from './components/Distribution';
-import Spending from './components/Spending';
-import YearMonthSelector from './components/YearMonthSelector';
-import MenuList from './components/MenuList';
-import { useState } from 'react';
-import { BasicTable } from './components/BasicTable';
-import SimplePlaidLink from './components/Link';
+import React, { useState } from 'react'
+import './App.css'
+import Nav from './components/Nav'
+import Distribution from './components/Distribution'
+import Spending from './components/Spending'
+import YearMonthSelector from './components/YearMonthSelector'
+import MenuList from './components/MenuList'
+import { BasicTable } from './components/BasicTable'
+import SimplePlaidLink from './components/Link'
 
+function App () {
+  const [menuView, setMenuView] = useState(false)
 
-function App() {
-  const [ menuView, setMenuView ] = useState(false);
-
-  function toggleMenu() {
-    setMenuView(!menuView);
+  function toggleMenu () {
+    setMenuView(!menuView)
   }
 
   return (
@@ -29,7 +27,7 @@ function App() {
         <BasicTable />
       </main>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

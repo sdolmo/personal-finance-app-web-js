@@ -1,5 +1,7 @@
-export default function YearMonthSelector() {
-    return (
+import React from 'react'
+
+export default function YearMonthSelector () {
+  return (
         <section id="date-selector">
             <label htmlFor="year">Year</label>
             <select name="year" id="year">
@@ -32,5 +34,5 @@ export default function YearMonthSelector() {
                 </option>
             </select>
         </section>
-    )
+  )
 }
