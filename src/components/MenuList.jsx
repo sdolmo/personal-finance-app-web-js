@@ -1,7 +1,8 @@
-import Icons from '../icons';
+import React from 'react'
+import Icons from '../icons'
 
-export default function MenuList() {
-    return (
+export default function MenuList () {
+  return (
         <>
             <aside>
                 <ul>
@@ -11,5 +12,5 @@ export default function MenuList() {
                 </ul>
             </aside>
         </>
-    )
+  )
 }

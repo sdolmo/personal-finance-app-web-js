@@ -1,5 +1,7 @@
-export default function TransactionList() {
-    return (
+import React from 'react'
+
+export default function TransactionList () {
+  return (
         <>
             <table>
                 <caption>Transactions</caption>
@@ -75,5 +77,5 @@ export default function TransactionList() {
                 </tbody>
             </table>
         </>
-    )
+  )
 }
