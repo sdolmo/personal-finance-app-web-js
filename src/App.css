@@ -1,168 +1,173 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .icon {
-    width: 2rem;
-    height: 2rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 nav {
-    width: 100vw;
-    display: flex;
-    position: sticky;
-    flex-direction: row;
-    padding: 0 0.5rem;
-    gap: 25%;
-    background-color: gray;
-    align-items: center;
-    justify-content: space-between;
+  width: 100vw;
+  display: flex;
+  position: sticky;
+  flex-direction: row;
+  padding: 0 0.5rem;
+  gap: 25%;
+  background-color: gray;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .icon-menu {
-    background: none;
-    border: none;
+  background: none;
+  border: none;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0 1rem;
-    justify-self: right;
+  list-style: none;
+  padding: 0 1rem;
+  justify-self: right;
 }
 
 aside {
-    height: 100vh;
-    width: 100vw;
-    background-color: lightblue;
-    position: absolute;
-    z-index: 2;
+  height: 100vh;
+  width: 100vw;
+  background-color: lightblue;
+  position: absolute;
+  z-index: 2;
 }
 
 aside ul .icon {
-    width: 5rem;
-    height: 5rem;
+  width: 5rem;
+  height: 5rem;
 }
 
 aside ul {
-    margin: 2rem auto;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 50%;
-    padding: 0 1rem;
+  margin: 2rem auto;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 50%;
+  padding: 0 1rem;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    margin: 1.5rem
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem;
 }
 
 #date-selector {
-    width: 20%;
+  width: 20%;
 }
 
 /* Table CSS */
 table {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    align-self: center;
-  }
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  align-self: center;
+}
 
-  table td, table th {
-    border: 1px solid #ddd;
-    padding: .5rem;
-  }
+table td,
+table th {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+}
 
-  table tr:nth-child(even){background-color: #f2f2f2;}
+table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
 
-  table tr:hover {background-color: #ddd;}
+table tr:hover {
+  background-color: #ddd;
+}
 
-  table th {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    text-align: center;
-    background-color: #8fc2ee;
-    color: white;
-  }
+table th {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  background-color: #8fc2ee;
+  color: white;
+}
 
 @media (min-width: 600px) {
-    aside ul .icon {
-        width: 1rem;
-        height: 1rem;
-    }
+  aside ul .icon {
+    width: 1rem;
+    height: 1rem;
+  }
 
-    aside {
-        height: 100vh;
-        width: 8vw;
-        background-color: lightblue;
-        position: absolute;
-        z-index: 2;
-    }
+  aside {
+    height: 100vh;
+    width: 8vw;
+    background-color: lightblue;
+    position: absolute;
+    z-index: 2;
+  }
 
-    aside ul {
-        margin: 1rem auto;
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        height: 15%;
-        padding: 0 1rem;
-    }
+  aside ul {
+    margin: 1rem auto;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 15%;
+    padding: 0 1rem;
+  }
 
-    main {
-        display: flex;
-        flex-direction: column;
-        margin: 2rem 5rem
-    }
+  main {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 5rem;
+  }
 }
 
 @media (min-width: 800px) {
-    #root {
-        width: 90vw;
-        height: 90vh;
-    }
+  #root {
+    width: 90vw;
+    height: 90vh;
+  }
 
-    main {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 10px;
-        margin: 3rem 5rem;
-    }
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    margin: 3rem 5rem;
+  }
 
-    aside {
-        height: 100vh;
-        width: 5vw;
-        background-color: lightblue;
-        position: absolute;
-        z-index: 2;
-    }
+  aside {
+    height: 100vh;
+    width: 5vw;
+    background-color: lightblue;
+    position: absolute;
+    z-index: 2;
+  }
 
-    #date-selector {
-        grid-column: 1/3;
-        grid-row: 1;
-    }
+  #date-selector {
+    grid-column: 1/3;
+    grid-row: 1;
+  }
 
-    #distribution #spending {
-        grid-row: 2;
-    }
+  #distribution #spending {
+    grid-row: 2;
+  }
 
-    #transactions {
-        grid-column: 1/3;
-        grid-row: 3;
-    }
+  #transactions {
+    grid-column: 1/3;
+    grid-row: 3;
+  }
 
-    table {
-        margin: 0 auto;
-    }
+  table {
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: 1200px) {
-    aside {
-        height: 100vh;
-        width: 4vw;
-    }
+  aside {
+    height: 100vh;
+    width: 4vw;
+  }
 }

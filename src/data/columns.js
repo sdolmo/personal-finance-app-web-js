@@ -1,18 +1,18 @@
 export const COLUMNS = [
   {
-    Header: 'Date',
-    accessor: 'date'
+    Header: "Date",
+    accessor: "date",
   },
   {
-    Header: 'Name',
-    accessor: 'name'
+    Header: "Name",
+    accessor: "name",
   },
   {
-    Header: 'Amount',
-    accessor: 'amount'
+    Header: "Amount",
+    accessor: "amount",
   },
   {
-    Header: 'Category',
-    accessor: 'category'
-  }
-]
+    Header: "Category",
+    accessor: "category",
+  },
+];
