@@ -1,20 +1,22 @@
-import React from 'react'
-import Icons from '../icons'
+import React from "react";
+import Icons from "../icons";
 
-export default function Nav (props) {
-  const heading = props.heading
+export default function Nav(props) {
+  const heading = props.heading;
 
   return (
-        <>
-            <nav>
-                <button className="icon-menu" onClick={() => props.onMenuClick()}>
-                    <img className="icon" src={Icons.menu} alt="menu" />
-                </button>
-                <h3>{heading}</h3>
-                <ul>
-                    <li><img className="icon" src={Icons.settings} alt="settings" /></li>
-                </ul>
-            </nav>
-        </>
-  )
+    <>
+      <nav>
+        <button className="icon-menu" onClick={() => props.onMenuClick()}>
+          <img className="icon" src={Icons.menu} alt="menu" />
+        </button>
+        <h3>{heading}</h3>
+        <ul>
+          <li>
+            <img className="icon" src={Icons.settings} alt="settings" />
+          </li>
+        </ul>
+      </nav>
+    </>
+  );
 }
