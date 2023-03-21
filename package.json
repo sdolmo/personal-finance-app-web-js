@@ -22,7 +22,8 @@
     "eject": "react-scripts eject",
     "preetier:check": "npx prettier --check .",
     "prettier:fix": "npx prettier --write .",
-    "lint": "npx eslint ."
+    "lint": "npx eslint .",
+    "prepare": "husky install"
   },
   "proxy": "http://localhost:4000",
   "eslintConfig": {
@@ -43,6 +44,12 @@
       "last 1 safari version"
     ]
   },
+  "lint-staged": {
+    "*.{css,html,json,jsx,js}": [
+      "prettier --write ."
+    ],
+    "*.js": "eslint --fix"
+  },
   "devDependencies": {
     "eslint": "^8.36.0",
     "eslint-config-prettier": "^8.8.0",
@@ -51,6 +58,8 @@
     "eslint-plugin-n": "^15.6.1",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.0",
     "prettier": "^2.8.6"
   }
 }
