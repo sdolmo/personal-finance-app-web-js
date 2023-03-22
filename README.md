@@ -182,6 +182,11 @@ Project Link: [https://github.com/sdolmo/personal-finance-app-web-js](https://gi
 
 ## Acknowledgments
 
+- [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
+- []()
+- []()
+- []()
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
