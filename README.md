@@ -1,70 +1,208 @@
-# Getting Started with Create React App
+<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<a name="readme-top"></a>
 
-## Available Scripts
+<!--
+*** Thanks for checking out the Best-README-Template. If you have a suggestion
+*** that would make this better, please fork the repo and create a pull request
+*** or simply open an issue with the tag "enhancement".
+*** Don't forget to give the project a star!
+*** Thanks again! Now go create something AMAZING! :D
+-->
 
-In the project directory, you can run:
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
 
-### `npm start`
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  <h3 align="center">Personal Finance App</h3>
 
-### `npm test`
+  <p align="center">
+    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    ·
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+  </p>
+</div>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-### `npm run build`
+<!-- ABOUT THE PROJECT -->
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## About The Project
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The Personal Finance Application allows users to view their account balances and monitor transactions
 
-### `npm run eject`
+The main features provided are:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- A dashboard that displays all connected accounts and their current balance.
+- Users can view their transactions and it's categorization
+- Secure connection to user's bank account using the Plaid Link API
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Built With
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [![React][React.js]][React-url]
 
-## Learn More
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<!-- GETTING STARTED -->
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Getting Started
 
-### Code Splitting
+To get a local copy up and running follow these simple example steps.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Prerequisites
 
-### Analyzing the Bundle Size
+This project uses npm
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
 
-### Making a Progressive Web App
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Clone the repo
+   ```sh
+   git clone https://github.com/sdolmo/personal-finance-app-web-js.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+3. In the project directory, you can run:
 
-### Advanced Configuration
+```sh
+  npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Runs the app in the development mode.
+Open http://localhost:3000 to view it in your browser.
 
-### Deployment
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<!-- USAGE EXAMPLES -->
 
-### `npm run build` fails to minify
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ROADMAP -->
+
+## Roadmap
+
+- [x] Add README
+- [ ] Add React Router
+- [ ] Add Login/Signup components
+- [ ] Add Dashboard page for Plaid Link component
+- [ ] Add Accounts page
+- [ ] Add Balance component
+- [ ] Add Transactions page
+- [ ] Update Google Charts with mock data
+- [ ] Update Year/Month selector widget
+- [ ] Host on GH pages
+
+See the [open issues](https://github.com/sdolmo/personal-finance-app-web-js/issues) for a full list of proposed features (and known issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## Contributing
+
+If you have a suggestion that would make this better, you can open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTACT -->
+
+## Contact
+
+Sylvia Dolmo - [@SylviaDolmo](https://twitter.com/SylviaDolmo) - sylviadolmo@example.com
+
+Project Link: [https://github.com/sdolmo/personal-finance-app-web-js](https://github.com/sdolmo/personal-finance-app-web-js)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGMENTS -->
+
+## Acknowledgments
+
+- [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
+- []()
+- []()
+- []()
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[forks-shield]: https://img.shields.io/github/forks/sdolmo/personal-finance-app-web-js.svg?style=for-the-badge
+[forks-url]: https://github.com/sdolmo/personal-finance-app-web-js/forks
+[stars-shield]: https://img.shields.io/github/stars/sdolmo/personal-finance-app-web-js.svg?style=for-the-badge
+[stars-url]: https://github.com/sdolmo/personal-finance-app-web-js/stargazers
+[issues-shield]: https://img.shields.io/github/issues/sdolmo/personal-finance-app-web-js.svg?style=for-the-badge
+[issues-url]: https://github.com/sdolmo/personal-finance-app-web-js/issues
+[license-shield]: https://img.shields.io/github/license/sdolmo/personal-finance-app-web-js.svg?style=for-the-badge
+[license-url]: https://github.com/sdolmo/personal-finance-app-web-js/blob/main/LICENSE
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/sylviadolmo/
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
+
+<!-- [product-screenshot]: images/screenshot.png -->
