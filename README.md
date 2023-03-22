@@ -172,7 +172,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Sylvia Dolmo - [@SylviaDolmo](https://twitter.com/SylviaDolmo) - email@example.com
+Sylvia Dolmo - [@SylviaDolmo](https://twitter.com/SylviaDolmo) - sylviadolmo@example.com
 
 Project Link: [https://github.com/sdolmo/personal-finance-app-web-js](https://github.com/sdolmo/personal-finance-app-web-js)
 
