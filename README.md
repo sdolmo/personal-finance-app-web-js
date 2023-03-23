@@ -142,7 +142,7 @@ Open http://localhost:3000 to view it in your browser.
   - [ ] Home
   - [ ] Login
   - [ ] Accounts
-  - [ ] Balnces
+  - [ ] Balances
   - [ ] Transactions
 - [ ] Update Google Charts with mock data
 - [ ] Update Year/Month selector widget
@@ -173,7 +173,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Sylvia Dolmo - [@SylviaDolmo](https://twitter.com/SylviaDolmo) - sylviadolmo@example.com
+Sylvia Dolmo - [@SylviaDolmo](https://twitter.com/SylviaDolmo) - sylviadolmo@gmail.com
 
 Project Link: [https://github.com/sdolmo/personal-finance-app-web-js](https://github.com/sdolmo/personal-finance-app-web-js)
 
