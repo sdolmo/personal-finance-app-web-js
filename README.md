@@ -137,12 +137,13 @@ Open http://localhost:3000 to view it in your browser.
 ## Roadmap
 
 - [x] Add README
-- [ ] Add React Router
-- [ ] Add Login/Signup components
-- [ ] Add Dashboard page for Plaid Link component
-- [ ] Add Accounts page
-- [ ] Add Balance component
-- [ ] Add Transactions page
+- [ ] Implement [React Router](https://reactrouter.com/en/main)
+- [ ] Add pages
+  - [ ] Home
+  - [ ] Login
+  - [ ] Accounts
+  - [ ] Balnces
+  - [ ] Transactions
 - [ ] Update Google Charts with mock data
 - [ ] Update Year/Month selector widget
 - [ ] Host on GH pages
@@ -183,9 +184,7 @@ Project Link: [https://github.com/sdolmo/personal-finance-app-web-js](https://gi
 ## Acknowledgments
 
 - [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
-- []()
-- []()
-- []()
+- [PIRATE KING](https://www.piratekingdom.com/projects/personal-finance-app-frontend)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
