@@ -19,6 +19,7 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
+
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
@@ -28,18 +29,16 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="">
+  <!-- <a href="">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+  </a> -->
 
   <h3 align="center">Personal Finance App</h3>
 
   <p align="center">
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://github.com/sdolmo/personal-finance-app-web-js/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/sdolmo/personal-finance-app-web-js/issues">Request Feature</a>
   </p>
 </div>
 
@@ -60,7 +59,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
+    <!-- <li><a href="#usage">Usage</a></li> -->
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -71,8 +70,6 @@
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 The Personal Finance Application allows users to view their account balances and monitor transactions
 
@@ -128,9 +125,9 @@ Open http://localhost:3000 to view it in your browser.
 
 <!-- USAGE EXAMPLES -->
 
-## Usage
+<!-- ## Usage -->
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- ROADMAP -->
 
