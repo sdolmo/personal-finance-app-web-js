@@ -134,13 +134,13 @@ Open http://localhost:3000 to view it in your browser.
 ## Roadmap
 
 - [x] Add README
-- [ ] Implement [React Router](https://reactrouter.com/en/main)
-- [ ] Add pages
-  - [ ] Home
-  - [ ] Login
-  - [ ] Accounts
-  - [ ] Balances
-  - [ ] Transactions
+- [x] Implement [React Router](https://reactrouter.com/en/main)
+- [x] Add pages
+  - [x] Home
+  - [x] Login
+  - [x] Accounts
+  - [x] Balances
+  - [x] Transactions
 - [ ] Update Google Charts with mock data
 - [ ] Update Year/Month selector widget
 - [ ] Host on GH pages
