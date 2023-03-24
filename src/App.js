@@ -1,32 +1,51 @@
 import React, { useState } from "react";
-import "./App.css";
-import Nav from "./components/Nav";
-import Distribution from "./components/Distribution";
-import Spending from "./components/Spending";
-import YearMonthSelector from "./components/YearMonthSelector";
-import MenuList from "./components/MenuList";
-import { BasicTable } from "./components/BasicTable";
-import SimplePlaidLink from "./components/Link";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import SharedLayout from "./pages/SharedLayout";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Error from "./pages/Error";
+import ProtectedRoute from "./pages/ProtectedRoute";
+import Accounts from "./pages/Accounts";
+import Balances from "./pages/Balances";
+import Transactions from "./pages/Transactions";
 
 function App() {
-  const [menuView, setMenuView] = useState(false);
-
-  function toggleMenu() {
-    setMenuView(!menuView);
-  }
+  const [user, setUser] = useState(null);
 
   return (
-    <>
-      <Nav onMenuClick={toggleMenu} heading="Accounts" />
-      {menuView ? <MenuList /> : null}
-      <main>
-        <SimplePlaidLink />
-        <YearMonthSelector />
-        <Distribution />
-        <Spending />
-        <BasicTable />
-      </main>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<Home />} />
+          <Route path="login" element={<Login setUser={setUser} />} />
+          <Route
+            path="accounts"
+            element={
+              <ProtectedRoute user={user}>
+                <Accounts user={user} />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="balances"
+            element={
+              <ProtectedRoute user={user}>
+                <Balances user={user} />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="transactions"
+            element={
+              <ProtectedRoute user={user}>
+                <Transactions user={user} />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="*" element={<Error />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

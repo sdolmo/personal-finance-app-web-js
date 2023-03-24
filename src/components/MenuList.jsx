@@ -1,5 +1,6 @@
 import React from "react";
 import Icons from "../icons";
+import { NavLink } from "react-router-dom";
 
 export default function MenuList() {
   return (
@@ -7,13 +8,23 @@ export default function MenuList() {
       <aside>
         <ul>
           <li>
-            <img className="icon" src={Icons.dashboard} alt="dashboard" />
+            <NavLink to="/accounts">
+              <img className="icon" src={Icons.dashboard} alt="dashboard" />
+            </NavLink>
           </li>
           <li>
-            <img className="icon" src={Icons.accounts} alt="accounts" />
+            <NavLink to="/balances">
+              <img className="icon" src={Icons.accounts} alt="accounts" />
+            </NavLink>
           </li>
           <li>
-            <img className="icon" src={Icons.transactions} alt="transactions" />
+            <NavLink to="/transactions">
+              <img
+                className="icon"
+                src={Icons.transactions}
+                alt="transactions"
+              />
+            </NavLink>
           </li>
         </ul>
       </aside>
