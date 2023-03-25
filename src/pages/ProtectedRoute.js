@@ -5,7 +5,7 @@ import MenuList from "../components/MenuList";
 
 ProtectedRoute.propTypes = {
   children: PropTypes.object,
-  user: PropTypes.object.isRequired,
+  user: PropTypes.object,
 };
 
 export default function ProtectedRoute({ children, user }) {
