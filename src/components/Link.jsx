@@ -1,15 +1,15 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useState, useEffect } from "react";
 import { usePlaidLink } from "react-plaid-link";
 
 const SimplePlaidLink = () => {
-  const [token] = useState(null);
+  const [token, setToken] = useState(null);
 
-  //   const createLinkToken = useCallback(async () => {
-  //     const response = await fetch("/api/create_link_token", { method: "POST" });
-  //     const { link_token } = await response.json();
-  //     setToken(link_token);
-  //     localStorage.setItem("link_token", link_token);
-  //   }, [setToken]);
+  const createLinkToken = useCallback(async () => {
+    const response = await fetch("/api/create_link_token", { method: "POST" });
+    const { link_token } = await response.json();
+    setToken(link_token);
+    localStorage.setItem("link_token", link_token);
+  }, [setToken]);
 
   const onSuccess = useCallback(async (publicToken) => {
     console.log(publicToken);
@@ -27,14 +27,15 @@ const SimplePlaidLink = () => {
     onSuccess,
   });
 
-  //   useEffect(() => {
-  //     if (token == null) {
-  //       createLinkToken();
-  //     }
-  //     if (ready) {
-  //       open();
-  //     }
-  //   }, [token, ready, open, createLinkToken]);
+  useEffect(() => {
+    if (token == null) {
+      console.log("NO TOKEN");
+      createLinkToken();
+    }
+    if (ready) {
+      console.log("READY TO GO");
+    }
+  }, [token, ready, createLinkToken]);
 
   return (
     <>
