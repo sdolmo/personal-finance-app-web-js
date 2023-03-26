@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 
 Login.propTypes = {
-  setUser: PropTypes.object,
+  setUser: PropTypes.func,
 };
 
 export default function Login({ setUser }) {
