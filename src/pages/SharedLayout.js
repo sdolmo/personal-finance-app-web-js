@@ -12,7 +12,9 @@ export default function SharedLayout({ setUser, setMenu }) {
   return (
     <>
       <Nav setMenu={setMenu} setUser={setUser} />
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
     </>
   );
 }

@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import Icons from "../icons";
 import Settings from "./Settings";
 import { UserContext, MenuContext } from "../Context";
@@ -25,13 +26,20 @@ export default function Nav({ setUser, setMenu }) {
   return (
     <>
       <nav>
-        {user ? (
-          <button className="icon-menu" onClick={showMenu}>
-            <img className="icon" src={Icons.menu} alt="menu" />
-          </button>
-        ) : null}
-        <ul>
-          <li>
+        <ul className="nav-content">
+          <li className="menu">
+            {user ? (
+              <button className="icon-menu" onClick={showMenu}>
+                <img className="icon" src={Icons.menu} alt="menu" />
+              </button>
+            ) : null}
+          </li>
+          <li className="logo">
+            <h3>
+              <Link to="/">💵 Personal Finance 💵</Link>
+            </h3>
+          </li>
+          <li className="settings">
             <button onClick={handleClick}>
               <img className="icon" src={Icons.settings} alt="settings" />
             </button>
