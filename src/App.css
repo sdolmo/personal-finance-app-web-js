@@ -1,41 +1,82 @@
+:root {
+  --aside-menu-background: #fcfcfc;
+}
+
 * {
   box-sizing: border-box;
 }
 
+#root {
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
 .icon {
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.8rem;
 }
 
 nav {
   width: 100vw;
-  display: flex;
+  display: grid;
   position: sticky;
+  padding: 0 2rem;
+  grid-template-rows: 1fr;
+}
+
+.nav-content {
+  display: flex;
   flex-direction: row;
-  padding: 0 0.5rem;
-  gap: 25%;
-  background-color: gray;
-  align-items: center;
   justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu {
+  margin-top: 1em;
 }
 
 .icon-menu {
   background: none;
   border: none;
+  margin: 0.5em 0 0;
 }
 
-nav ul {
+.logo {
+  margin: 0;
+}
+
+.settings {
+  margin-top: 1em;
+}
+
+.settings-menu {
+  position: absolute;
+  display: flex;
+  background-color: var(--aside-menu-background);
+  width: 10em;
+  right: 4em;
+  flex-direction: column;
+  align-items: center;
+}
+
+.settings-menu h5 {
+  margin: 0.8em 0;
+}
+
+.settings-menu ul {
   list-style: none;
-  padding: 0 1rem;
-  justify-self: right;
+  padding: 0;
+  margin: 0.5em;
 }
 
 aside {
-  height: 100vh;
+  height: 80vh;
   width: 100vw;
-  background-color: lightblue;
-  position: absolute;
-  z-index: 2;
+  background-color: var(--aside-menu-background);
 }
 
 aside ul .icon {
@@ -52,6 +93,8 @@ aside ul {
   align-items: center;
   height: 50%;
   padding: 0 1rem;
+  padding-top: 2rem;
+  gap: 2rem;
 }
 
 main {
@@ -102,9 +145,7 @@ table th {
   aside {
     height: 100vh;
     width: 8vw;
-    background-color: lightblue;
     position: absolute;
-    z-index: 2;
   }
 
   aside ul {
@@ -126,11 +167,6 @@ table th {
 }
 
 @media (min-width: 800px) {
-  #root {
-    width: 90vw;
-    height: 90vh;
-  }
-
   main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -138,26 +174,29 @@ table th {
     margin: 3rem 5rem;
   }
 
+  main h2 {
+    grid-row: 1;
+  }
+
   aside {
     height: 100vh;
     width: 5vw;
-    background-color: lightblue;
     position: absolute;
-    z-index: 2;
   }
 
   #date-selector {
     grid-column: 1/3;
-    grid-row: 1;
+    grid-row: 2;
   }
 
-  #distribution #spending {
-    grid-row: 2;
+  #distribution,
+  #spending {
+    grid-row: 3;
   }
 
   #transactions {
     grid-column: 1/3;
-    grid-row: 3;
+    grid-row: 4;
   }
 
   table {

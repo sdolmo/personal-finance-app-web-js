@@ -6,12 +6,12 @@ import { BasicTable } from "../components/BasicTable";
 
 export default function Transactions() {
   return (
-    <section>
+    <>
       <h2>Transactions Page</h2>
       <YearMonthSelector />
       <Distribution />
       <Spending />
       <BasicTable />
-    </section>
+    </>
   );
 }

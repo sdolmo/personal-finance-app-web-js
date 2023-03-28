@@ -29,12 +29,17 @@ export default function Settings({ setSettings, setUser, setMenu }) {
   };
 
   return (
-    <section>
-      {user ? (
-        <button onClick={handleSignout}>Signout</button>
-      ) : (
-        <button onClick={handleLogin}>Login</button>
-      )}
+    <section className="settings-menu">
+      <h5>Settings</h5>
+      <ul>
+        <li>
+          {user ? (
+            <button onClick={handleSignout}>Signout</button>
+          ) : (
+            <button onClick={handleLogin}>Login</button>
+          )}
+        </li>
+      </ul>
     </section>
   );
 }
