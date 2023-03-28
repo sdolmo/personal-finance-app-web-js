@@ -53,6 +53,26 @@ nav {
   margin-top: 1em;
 }
 
+.settings-menu {
+  position: absolute;
+  display: flex;
+  background-color: var(--aside-menu-background);
+  width: 10em;
+  right: 4em;
+  flex-direction: column;
+  align-items: center;
+}
+
+.settings-menu h5 {
+  margin: 0.8em 0;
+}
+
+.settings-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5em;
+}
+
 aside {
   height: 80vh;
   width: 100vw;
