@@ -20,10 +20,9 @@ export default function Login({ setUser }) {
   };
 
   return (
-    <section>
-      <h2>Login Page</h2>
-      <form onSubmit={handleSubmit}>
-        <h5>Login</h5>
+    <section className="login">
+      <form className="login-form" onSubmit={handleSubmit}>
+        <h3>Login</h3>
         <label htmlFor="name">Name</label>
         <input
           id="name"
