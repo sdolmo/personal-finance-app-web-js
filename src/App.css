@@ -1,9 +1,23 @@
 :root {
-  --aside-menu-background: #fcfcfc;
+  --main-color: rgb(154, 220, 172);
+  --aside-menu-background: #fefefe;
 }
 
 * {
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+button {
+  background-color: rgba(255, 255, 255, 0.028);
+  border: 1.5px solid var(--main-color);
+  padding: 0.8rem;
+  border-radius: 10%;
+}
+
+.logo h3 a {
+  text-decoration: none;
+  color: black;
 }
 
 #root {
@@ -101,10 +115,40 @@ main {
   display: flex;
   flex-direction: column;
   margin: 1.5rem;
+  justify-content: center;
 }
 
 #date-selector {
   width: 20%;
+}
+
+/* Login */
+.login {
+  padding: 0 auto;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  height: 60vh;
+  margin: 0 auto;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: var(--aside-menu-background);
+}
+
+.login-form label {
+  align-self: self-start;
+}
+
+.login-form input {
+  width: 100%;
+}
+
+.login-form button {
+  width: 30%;
 }
 
 /* Table CSS */
@@ -201,6 +245,10 @@ table th {
 
   table {
     margin: 0 auto;
+  }
+
+  .login {
+    grid-column: 1/3;
   }
 }
 
