@@ -245,6 +245,7 @@ table th {
 
   table {
     margin: 0 auto;
+    width: 70%;
   }
 
   .login {
