@@ -1,14 +1,26 @@
 import React from "react";
+import MOCK_DATA from "../data/MOCK_DATA2.json";
 
 export default function YearMonthSelector() {
+  const data = MOCK_DATA;
+
+  const years = data.map((transaction) => transaction.date.slice(-4));
+  const uniqueYears = years.filter(
+    (value, index, array) => array.indexOf(value) === index
+  );
+
   return (
     <section id="date-selector">
       <label htmlFor="year">Year</label>
       <select name="year" id="year">
         <option value="">--Please select an year</option>
-        <option value="2023">2023</option>
-        <option value="2022">2022</option>
-        <option value="2021">2021</option>
+        {uniqueYears.map((year) => {
+          return (
+            <option key={year} value={year}>
+              {year}
+            </option>
+          );
+        })}
       </select>
       <label htmlFor="month">Month</label>
       <select name="month" id="month">
