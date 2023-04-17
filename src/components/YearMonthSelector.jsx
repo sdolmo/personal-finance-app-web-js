@@ -1,7 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+
 import MOCK_DATA from "../data/MOCK_DATA2.json";
 
-export default function YearMonthSelector() {
+YearMonthSelector.propTypes = {
+  setData: PropTypes.func,
+};
+
+export default function YearMonthSelector({ setData }) {
   const [yearChosen, setYearChosen] = useState(0);
   const [monthRange, setMonthRange] = useState([]);
   const [monthChosen, setMonthChosen] = useState(0);
@@ -30,6 +36,23 @@ export default function YearMonthSelector() {
       setMonthChosen(0);
     }
   }
+
+  function handleDataChange() {
+    const filteredData = data.filter((transaction) => {
+      const transactionMonth = transaction.date.slice(0, 2);
+      const transactionYear = transaction.date.slice(-4);
+      const transactionDate = transactionMonth + "/" + transactionYear;
+      return transactionDate === monthChosen + "/" + yearChosen;
+    });
+    const newData = [...filteredData];
+    setData(newData);
+  }
+
+  useEffect(() => {
+    if (yearChosen !== 0 && monthChosen !== 0) {
+      handleDataChange();
+    }
+  }, [yearChosen, monthChosen]);
 
   return (
     <section id="date-selector">
