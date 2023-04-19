@@ -2,8 +2,13 @@ import React, { useMemo } from "react";
 import { useTable } from "react-table";
 import MOCK_DATA from "../data/MOCK_DATA2.json";
 import { COLUMNS } from "../data/columns";
+import PropTypes from "prop-types";
 
-export const BasicTable = () => {
+BasicTable.propTypes = {
+  filteredData: PropTypes.array,
+};
+
+export function BasicTable({ filteredData }) {
   const columns = useMemo(() => COLUMNS, []);
   const data = useMemo(() => MOCK_DATA, []);
 
@@ -51,4 +56,4 @@ export const BasicTable = () => {
       </table>
     </section>
   );
-};
+}
