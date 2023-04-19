@@ -13,7 +13,7 @@ export default function Transactions() {
 
   return (
     <DataContext.Provider value={data}>
-      <h2>Transactions Page</h2>
+      <h2>Transactions</h2>
       <YearMonthSelector setData={setData} />
       <Distribution />
       <Spending />

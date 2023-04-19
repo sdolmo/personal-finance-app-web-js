@@ -19,7 +19,6 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
@@ -142,10 +141,26 @@ Open http://localhost:3000 to view it in your browser.
   - [x] Balances
   - [x] Transactions
 - [ ] Update Google Charts with mock data
-- [ ] Update Year/Month selector widget
+- [x] Update Year/Month selector widget
 - [ ] Host on GH pages
 
 See the [open issues](https://github.com/sdolmo/personal-finance-app-web-js/issues) for a full list of proposed features (and known issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- KEY COMMITS -->
+
+## Key Commits
+
+Here is a list of some key commits that were essential in building this project:
+
+- [Implementing React Router](https://github.com/sdolmo/personal-finance-app-web-js/pull/17)
+- Styling:
+  - [Basic styling](https://github.com/sdolmo/personal-finance-app-web-js/pull/27/files)
+  - Final styling
+- Display account balance
+- Using Plaid API to get Transactions data
+- Updating transactions UI with filtered data
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
