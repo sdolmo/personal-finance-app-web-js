@@ -18,6 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:server": "node src/api/index.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -26,7 +27,7 @@
     "lint": "npx eslint .",
     "prepare": "husky install"
   },
-  "proxy": "http://localhost:4000",
+  "proxy": "http://localhost:4000/",
   "eslintConfig": {
     "extends": [
       "react-app",
