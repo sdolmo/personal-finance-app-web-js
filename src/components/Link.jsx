@@ -6,13 +6,12 @@ const SimplePlaidLink = () => {
 
   const createLinkToken = useCallback(async () => {
     const response = await fetch("/api/create_link_token", { method: "POST" });
-    const { link_token } = await response.json();
-    setToken(link_token);
-    localStorage.setItem("link_token", link_token);
+    const linkToken = await response.json();
+    setToken(linkToken);
+    localStorage.setItem("linkToken", linkToken);
   }, [setToken]);
 
   const onSuccess = useCallback(async (publicToken) => {
-    console.log(publicToken);
     await fetch("/api/exchange_public_token", {
       method: "POST",
       headers: {
@@ -32,10 +31,7 @@ const SimplePlaidLink = () => {
       console.log("NO TOKEN");
       createLinkToken();
     }
-    if (ready) {
-      console.log("READY TO GO");
-    }
-  }, [token, ready, createLinkToken]);
+  }, [token, ready, open, createLinkToken]);
 
   return (
     <>
