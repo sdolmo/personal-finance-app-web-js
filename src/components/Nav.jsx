@@ -36,7 +36,7 @@ export default function Nav({ setUser, setMenu }) {
           </li>
           <li className="logo">
             <h3>
-              <Link to="/">💵 Personal Finance 💵</Link>
+              <Link to="/">Personal Finance</Link>
             </h3>
           </li>
           <li className="settings">

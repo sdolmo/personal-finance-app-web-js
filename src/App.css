@@ -9,10 +9,10 @@
 }
 
 button {
-  background-color: rgba(255, 255, 255, 0.028);
-  border: 1.5px solid var(--main-color);
-  padding: 0.8rem;
-  border-radius: 10%;
+  background-color: #ffff;
+  border-radius: 5px;
+  border: none;
+  padding: 0.5em 1em;
 }
 
 .logo h3 a {
@@ -21,7 +21,7 @@ button {
 }
 
 #root {
-  background-color: #f2f2f2;
+  /* background-color: #f2f2f2; */
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -34,10 +34,12 @@ button {
 
 nav {
   width: 100vw;
+  height: 4.5rem;
   display: grid;
   position: sticky;
   padding: 0 2rem;
   grid-template-rows: 1fr;
+  border-bottom: #979797 2px solid;
 }
 
 .nav-content {
@@ -54,9 +56,8 @@ nav {
 }
 
 .icon-menu {
-  background: none;
+  background-color: #ffff;
   border: none;
-  margin: 0.5em 0 0;
 }
 
 .logo {
@@ -88,7 +89,8 @@ nav {
 }
 
 aside {
-  height: 80vh;
+  position: absolute;
+  height: 100%;
   width: 100vw;
   background-color: var(--aside-menu-background);
 }
@@ -176,7 +178,7 @@ table th {
   padding-top: 1rem;
   padding-bottom: 1rem;
   text-align: center;
-  background-color: #8fc2ee;
+  background-color: #000000;
   color: white;
 }
 
