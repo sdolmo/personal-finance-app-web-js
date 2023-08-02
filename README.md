@@ -141,9 +141,14 @@ Open http://localhost:3000 to view it in your browser.
   - [x] Accounts
   - [x] Balances
   - [x] Transactions
-- [ ] Update Google Charts with mock data
-- [ ] Update Year/Month selector widget
-- [ ] Host on GH pages
+- [x] Update Google Charts with mock data --> Used AG Grid Instead
+- [x] Update Year/Month selector widget --> Used AG Grid instead
+- [ ] Get Transactions from Plaid API to display on the Transactions page
+- [ ] Update Styling
+- [ ] Code clean up
+  - [ ] Spending Component
+  - [ ] Remove Balances Page
+- [ ] Host on Netlify
 
 See the [open issues](https://github.com/sdolmo/personal-finance-app-web-js/issues) for a full list of proposed features (and known issues).
 
