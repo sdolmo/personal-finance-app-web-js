@@ -28,11 +28,7 @@ export const TransactionsTable = () => {
   );
 
   return (
-    <div
-      id="transactions"
-      className="ag-theme-alpine"
-      style={{ height: 600, width: 800 }}
-    >
+    <div id="transactions" className="ag-theme-alpine">
       <AgGridReact
         ref={gridRef}
         rowData={rowData}
