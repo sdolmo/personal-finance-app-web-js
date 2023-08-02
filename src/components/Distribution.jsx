@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { AgChartsReact } from "ag-charts-react";
 import Data from "../data/MOCK_DATA_726.json";
 
-class Catgory {
+class Category {
   constructor(category) {
     this.category = category;
     this.budget = this.calculateBudget();
@@ -34,10 +34,10 @@ const totalSpend = Number(
 );
 const allCategories = Data.map((t) => t.category);
 const categories = Array.from(new Set(allCategories));
-const optionData = categories.map((c) => new Catgory(c));
+const optionData = categories.map((c) => new Category(c));
 
 export default function Distribution() {
-  const [options, setOptions] = useState({
+  const [options] = useState({
     data: optionData,
     series: [
       {
@@ -48,9 +48,6 @@ export default function Distribution() {
       },
     ],
   });
-
-  console.log(categories);
-  console.log(optionData);
 
   return (
     <section id="distribution">

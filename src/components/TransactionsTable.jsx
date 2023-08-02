@@ -31,7 +31,7 @@ export const TransactionsTable = () => {
     <div
       id="transactions"
       className="ag-theme-alpine"
-      style={{ height: 400, width: 800 }}
+      style={{ height: 600, width: 800 }}
     >
       <AgGridReact
         ref={gridRef}
