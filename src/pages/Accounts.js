@@ -1,11 +1,16 @@
 import React from "react";
 import Link from "../components/Link";
+import PropTypes from "prop-types";
 
-export default function Accounts() {
+Accounts.propTypes = {
+  setTransactions: PropTypes.func,
+};
+
+export default function Accounts({ setTransactions }) {
   return (
     <section>
       <h2>Accounts Page</h2>
-      <Link />
+      <Link setTransactions={setTransactions} />
     </section>
   );
 }

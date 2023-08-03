@@ -1,17 +1,23 @@
 import React, { useState, useMemo, useRef } from "react";
 import { AgGridReact } from "ag-grid-react";
-import MOCK_DATA from "../data/MOCK_DATA_726.json";
+// import MOCK_DATA from "../data/MOCK_DATA_726.json";
 
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 
-export const TransactionsTable = () => {
+import PropTypes from "prop-types";
+
+TransactionsTable.propTypes = {
+  transactions: PropTypes.array,
+};
+
+export default function TransactionsTable({ transactions }) {
   const gridRef = useRef();
-  const [rowData] = useState(MOCK_DATA);
+  const [rowData] = useState(transactions);
   const [columnDefs] = useState([
     { field: "date" },
     { field: "amount" },
-    { field: "merchant_name" },
+    { field: "merchant" },
     { field: "category" },
   ]);
 
@@ -37,4 +43,4 @@ export const TransactionsTable = () => {
       ></AgGridReact>
     </div>
   );
-};
+}

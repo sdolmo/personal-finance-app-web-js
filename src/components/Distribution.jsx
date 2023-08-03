@@ -1,17 +1,38 @@
 import React, { useState } from "react";
 import { AgChartsReact } from "ag-charts-react";
-import Data from "../data/MOCK_DATA_726.json";
+// import Data from "../data/MOCK_DATA_726.json";
+
+import PropTypes from "prop-types";
+
+Distribution.propTypes = {
+  transactions: PropTypes.array,
+};
 
 class Category {
-  constructor(category) {
+  constructor(category, percent) {
     this.category = category;
-    this.budget = this.calculateBudget();
-    this.percent = this.calculatePercent(this.budget);
+    this.percent = percent;
   }
+}
 
-  calculateBudget() {
-    const categoryList = Data.filter(
-      (transaction) => transaction.category === this.category
+export default function Distribution({ transactions }) {
+  const totalSpend = Number(
+    transactions
+      .reduce((accum, transaction) => accum + transaction.amount, 0)
+      .toFixed(2)
+  );
+
+  const allCategories = transactions.map((t) => t.category);
+  const categories = Array.from(new Set(allCategories));
+
+  const calculatePercent = (spend) => {
+    const calc = (spend / totalSpend) * 100;
+    return Number(calc.toFixed(2));
+  };
+
+  const calculateBudget = (category) => {
+    const categoryList = transactions.filter(
+      (transaction) => transaction.category === category
     );
 
     const categorySpend = Number(
@@ -21,22 +42,15 @@ class Category {
     );
 
     return categorySpend;
-  }
+  };
 
-  calculatePercent(spend) {
-    const calc = (spend / totalSpend) * 100;
-    return Number(calc.toFixed(2));
-  }
-}
+  const optionData = categories.map((category) => {
+    const categorySpend = calculateBudget(category);
+    const percentage = calculatePercent(categorySpend);
 
-const totalSpend = Number(
-  Data.reduce((accum, transaction) => accum + transaction.amount, 0).toFixed(2)
-);
-const allCategories = Data.map((t) => t.category);
-const categories = Array.from(new Set(allCategories));
-const optionData = categories.map((c) => new Category(c));
+    return new Category(category, percentage);
+  });
 
-export default function Distribution() {
   const [options] = useState({
     data: optionData,
     series: [
