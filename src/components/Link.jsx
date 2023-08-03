@@ -10,7 +10,12 @@ export default function SimplePlaidLink({ setTransactions }) {
   const [token, setToken] = useState(null);
 
   const createLinkToken = useCallback(async () => {
-    const response = await fetch("/api/create_link_token", { method: "POST" });
+    const response = await fetch("/api/create_link_token", {
+      method: "POST",
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
+    });
     const linkToken = await response.json();
     setToken(linkToken);
     localStorage.setItem("linkToken", linkToken);
@@ -21,6 +26,7 @@ export default function SimplePlaidLink({ setTransactions }) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
       },
       body: JSON.stringify({ public_token: publicToken }),
     });
@@ -28,7 +34,13 @@ export default function SimplePlaidLink({ setTransactions }) {
   }, []);
 
   const getTransactions = useCallback(async () => {
-    const response = await fetch("/api/get_transactions", { method: "GET" });
+    const response = await fetch("/api/get_transactions", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+    });
     const { transArr: data } = await response.json();
 
     setTransactions(data);
