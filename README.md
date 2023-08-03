@@ -143,7 +143,7 @@ Open http://localhost:3000 to view it in your browser.
   - [x] Transactions
 - [x] Update Google Charts with mock data --> Used AG Grid Instead
 - [x] Update Year/Month selector widget --> Used AG Grid instead
-- [ ] Get Transactions from Plaid API to display on the Transactions page
+- [x] Get Transactions from Plaid API to display on the Transactions page
 - [ ] Update Styling
 - [ ] Code clean up
   - [ ] Spending Component
