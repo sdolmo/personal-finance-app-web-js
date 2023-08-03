@@ -93,6 +93,7 @@ aside {
   height: 100%;
   width: 100vw;
   background-color: var(--aside-menu-background);
+  z-index: 1;
 }
 
 aside ul .icon {
@@ -122,6 +123,15 @@ main {
 
 #date-selector {
   width: 20%;
+}
+
+#banner {
+  background-image: url("./images/budgeting.png");
+  background-position: center;
+  height: 32em;
+  width: 100%;
+  z-index: -1;
+  grid-row: 1;
 }
 
 /* Login */
@@ -199,8 +209,8 @@ table th {
     list-style: none;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    justify-content: unset;
     height: 15%;
     padding: 0 1rem;
   }
@@ -223,13 +233,37 @@ table th {
     grid-template-columns: repeat(4, 25%);
     grid-gap: 10px;
     margin: 3rem 5rem;
+    height: 100vh;
+    grid-template-rows: 10% 25% 25% 25%;
   }
 
   main h2 {
     grid-row: 1;
   }
 
-  aside {
+  #banner {
+    grid-column: 1 / 5;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    grid-row: 3 / 4;
+    grid-column: 1 / 5;
+    gap: 1rem;
+    margin: 5em auto;
+  }
+
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    max-width: 18em;
+  }
+
+  .box p aside {
     height: 100%;
     width: 5vw;
     position: absolute;
@@ -245,12 +279,12 @@ table th {
 
   #distribution,
   #spending {
-    grid-row: 3;
+    grid-row: 2/3;
   }
 
   #transactions {
     grid-column: 2/4;
-    grid-row: 4;
+    grid-row: 3;
     width: 40rem;
     height: 20rem;
   }
