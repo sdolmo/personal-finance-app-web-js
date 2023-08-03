@@ -71,7 +71,7 @@
 
 ## About The Project
 
-The Personal Finance Application allows users to view their account balances and monitor transactions
+The Personal Finance Application allows users to view and monitor transactions
 
 The main features provided are:
 
