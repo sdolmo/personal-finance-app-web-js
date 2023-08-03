@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { AgChartsReact } from "ag-charts-react";
-// import Data from "../data/MOCK_DATA_726.json";
 
 import PropTypes from "prop-types";
 

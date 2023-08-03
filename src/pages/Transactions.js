@@ -7,7 +7,6 @@ import { TransactionsDataContext } from "../Context";
 export default function Transactions() {
   const data = useContext(TransactionsDataContext);
 
-  console.log(data);
   return (
     <>
       <h2>Transactions Page</h2>

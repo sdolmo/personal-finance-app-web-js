@@ -30,7 +30,6 @@ export default function SimplePlaidLink({ setTransactions }) {
   const getTransactions = useCallback(async () => {
     const response = await fetch("/api/get_transactions", { method: "GET" });
     const { transArr: data } = await response.json();
-    console.log(data);
 
     setTransactions(data);
   }, []);
