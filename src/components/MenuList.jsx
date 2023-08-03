@@ -13,11 +13,6 @@ export default function MenuList() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/balances">
-              <img className="icon" src={Icons.accounts} alt="accounts" />
-            </NavLink>
-          </li>
-          <li>
             <NavLink to="/transactions">
               <img
                 className="icon"

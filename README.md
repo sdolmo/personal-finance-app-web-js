@@ -19,7 +19,6 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 
-
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
@@ -145,9 +144,9 @@ Open http://localhost:3000 to view it in your browser.
 - [x] Update Year/Month selector widget --> Used AG Grid instead
 - [x] Get Transactions from Plaid API to display on the Transactions page
 - [ ] Update Styling
-- [ ] Code clean up
-  - [ ] Spending Component
-  - [ ] Remove Balances Page
+- [x] Code clean up
+  - [x] Spending Component
+  - [x] Remove Balances Page
 - [ ] Host on Netlify
 
 See the [open issues](https://github.com/sdolmo/personal-finance-app-web-js/issues) for a full list of proposed features (and known issues).
