@@ -1,7 +1,12 @@
 import React, { useCallback, useState, useEffect } from "react";
 import { usePlaidLink } from "react-plaid-link";
+import PropTypes from "prop-types";
 
-const SimplePlaidLink = () => {
+SimplePlaidLink.propTypes = {
+  setTransactions: PropTypes.func,
+};
+
+export default function SimplePlaidLink({ setTransactions }) {
   const [token, setToken] = useState(null);
 
   const createLinkToken = useCallback(async () => {
@@ -19,6 +24,15 @@ const SimplePlaidLink = () => {
       },
       body: JSON.stringify({ public_token: publicToken }),
     });
+    getTransactions();
+  }, []);
+
+  const getTransactions = useCallback(async () => {
+    const response = await fetch("/api/get_transactions", { method: "GET" });
+    const { transArr: data } = await response.json();
+    console.log(data);
+
+    setTransactions(data);
   }, []);
 
   const { open, ready } = usePlaidLink({
@@ -28,7 +42,6 @@ const SimplePlaidLink = () => {
 
   useEffect(() => {
     if (token == null) {
-      console.log("NO TOKEN");
       createLinkToken();
     }
   }, [token, ready, open, createLinkToken]);
@@ -40,6 +53,4 @@ const SimplePlaidLink = () => {
       </button>
     </>
   );
-};
-
-export default SimplePlaidLink;
+}

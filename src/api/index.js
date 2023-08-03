@@ -71,6 +71,8 @@ app.post("/api/exchange_public_token", async (req, res) => {
     const exchangeResponse = await client.itemPublicTokenExchange(request);
     ACCESS_TOKEN = exchangeResponse.data.access_token;
     ITEM_ID = exchangeResponse.data.item_id;
+    console.log("Token:", ACCESS_TOKEN);
+    console.log("ID:", ITEM_ID);
     res.json(true);
   } catch (error) {
     console.log(
@@ -78,6 +80,51 @@ app.post("/api/exchange_public_token", async (req, res) => {
     );
   }
 });
+
+/* eslint-disable camelcase */
+app.get("/api/get_transactions", async (req, res) => {
+  try {
+    // Get transactions to be cached
+    const response = await client.transactionsSync({
+      access_token: ACCESS_TOKEN,
+    });
+    const transactions = response.data.added;
+
+    const transArr = [];
+    for (const transaction of transactions) {
+      const {
+        transaction_id,
+        date,
+        amount,
+        merchant_name,
+        category: categories,
+      } = transaction;
+
+      const category = categories ? categories[0] : "Other";
+
+      transArr.push(
+        new Transaction(transaction_id, date, amount, merchant_name, category)
+      );
+    }
+
+    res.json({ transArr });
+  } catch (error) {
+    console.log(
+      `An error occured during Plaid API call ${error.response.data.error_message}`
+    );
+  }
+});
+
+/* eslint-disable no-unneeded-ternary */
+class Transaction {
+  constructor(id, date, amount, merchant, category) {
+    this.id = id;
+    this.date = date;
+    this.amount = Math.abs(amount); // calcualte amount for negatives
+    this.merchant = merchant ? merchant : "Unknown";
+    this.category = category;
+  }
+}
 
 app.listen(APP_PORT, () => {
   console.log(`Example app listening on port ${APP_PORT}`);
