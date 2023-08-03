@@ -70,19 +70,23 @@
 
 ## About The Project
 
-The Personal Finance Application allows users to view and monitor transactions
+<img src="./src/images/personal-finance-app.png" />
+
+The Personal Finance Application allows users to view and monitor transactions associated with their accounts.
 
 The main features provided are:
 
 - A dashboard that displays all connected accounts and their current balance.
-- Users can view their transactions and it's categorization
-- Secure connection to user's bank account using the Plaid Link API
+- Users can view their transactions and it's categorization.
+- Secure connection to user's bank account using the Plaid Link API.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
 - [![React][React.js]][React-url]
+- [![React-router][React-router]][React-router-url]
+- [![AG-Grid][AG-Grid]][AG-Grid-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -124,9 +128,33 @@ Open http://localhost:3000 to view it in your browser.
 
 <!-- USAGE EXAMPLES -->
 
-<!-- ## Usage -->
+## Usage
 
-<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
+### For Developers
+
+To use the application, you must have a Plaid account. You can create one [here](https://dashboard.plaid.com/signup).
+
+Once you have an account, you can connect your `PLAID_CLIENT_ID` and `PLAID_SECRENT` in the `.env` file.
+
+Use the following credentials when connecting your account:
+
+- Username: `user_good`
+- Password: `pass_good`
+- Code: `credential_good`
+
+### Use Live Demo
+
+To just use the live demo, you can use the following credentials:
+
+1. Login using a name and email address
+2. Connect your account using the following credentials:
+
+- Username: `user_good`
+- Password: `pass_good`
+- Code: `credential_good`
+
+3. View your transactions
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ROADMAP -->
 
@@ -143,7 +171,7 @@ Open http://localhost:3000 to view it in your browser.
 - [x] Update Google Charts with mock data --> Used AG Grid Instead
 - [x] Update Year/Month selector widget --> Used AG Grid instead
 - [x] Get Transactions from Plaid API to display on the Transactions page
-- [ ] Update Styling
+- [x] Update Styling
 - [x] Code clean up
   - [x] Spending Component
   - [x] Remove Balances Page
@@ -204,5 +232,9 @@ Project Link: [https://github.com/sdolmo/personal-finance-app-web-js](https://gi
 [linkedin-url]: https://www.linkedin.com/in/sylviadolmo/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
+[React-router]: https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&color=white
+[React-router-url]: https://reactrouter.com/
+[AG-Grid]: https://img.shields.io/badge/AG_Grid-2B9348?style=for-the-badge&logo=ag-grid&logoColor=white
+[AG-Grid-url]: https://www.ag-grid.com/
 
 <!-- [product-screenshot]: images/screenshot.png -->
