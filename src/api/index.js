@@ -71,8 +71,6 @@ app.post("/api/exchange_public_token", async (req, res) => {
     const exchangeResponse = await client.itemPublicTokenExchange(request);
     ACCESS_TOKEN = exchangeResponse.data.access_token;
     ITEM_ID = exchangeResponse.data.item_id;
-    console.log("Token:", ACCESS_TOKEN);
-    console.log("ID:", ITEM_ID);
     res.json(true);
   } catch (error) {
     console.log(
