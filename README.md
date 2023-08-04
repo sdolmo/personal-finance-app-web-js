@@ -136,7 +136,7 @@ To use the application, you must have a Plaid account. You can create one [here]
 
 Once you have an account, you can connect your `PLAID_CLIENT_ID` and `PLAID_SECRENT` in the `.env` file.
 
-Use the following credentials when connecting your account:
+Use the following credentials to connect to the sandbox environment:
 
 - Username: `user_good`
 - Password: `pass_good`
@@ -147,7 +147,7 @@ Use the following credentials when connecting your account:
 To just use the live demo, you can use the following credentials:
 
 1. Login using a name and email address
-2. Connect your account using the following credentials:
+2. Use the following credentials to connect to the sandbox environment:
 
 - Username: `user_good`
 - Password: `pass_good`
