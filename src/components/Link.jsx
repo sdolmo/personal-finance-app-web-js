@@ -14,7 +14,7 @@ export default function SimplePlaidLink({ setTransactions }) {
       (response) => response.json()
     );
 
-    const linkToken = response;
+    const { linkToken } = JSON.parse(response.body);
 
     setToken(linkToken);
 

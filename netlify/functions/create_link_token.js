@@ -46,7 +46,10 @@ router.get("/create_link_token", async (req, res) => {
     const linkToken = linkTokenData.link_token;
     process.env.TOKEN = linkToken;
     console.log(process.env.TOKEN);
-    res.json(linkToken);
+    res.json({
+      statusCode: 200,
+      body: JSON.stringify({ linkToken }),
+    });
   } catch (error) {
     console.log(
       `An error occured during plaid API call: ${error.response.data.error_message}`
