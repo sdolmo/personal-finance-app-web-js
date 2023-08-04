@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useEffect, useCallback, useState } from "react";
 
 export default function Home() {
+  const [res, setRes] = useState("");
+  const hello = useCallback(async () => {
+    const response = await fetch("/api/hello", {
+      method: "POST",
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
+    });
+    const { data } = await response.json();
+    console.log(data);
+    setRes(data);
+  }, [setRes]);
+
+  useEffect(() => {
+    hello();
+  }, [res, hello]);
+
   return (
     <>
-      <h2></h2>
+      <h2>{res}</h2>
       <section id="banner"></section>
       <div className="container">
         <section className="box">
