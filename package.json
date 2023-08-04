@@ -33,6 +33,7 @@
     "prepare": "husky install"
   },
   "proxy": "http://localhost:4000/",
+  "homepage": "https://gleeful-rugelach-161346.netlify.app/",
   "eslintConfig": {
     "extends": [
       "react-app",
