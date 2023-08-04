@@ -10,41 +10,41 @@ export default function SimplePlaidLink({ setTransactions }) {
   const [token, setToken] = useState(null);
 
   const createLinkToken = useCallback(async () => {
-    const response = await fetch("/api/create_link_token", {
-      method: "POST",
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-      },
-    });
-    const linkToken = await response.json();
+    const response = await fetch("/.netlify/functions/create_link_token").then(
+      (response) => response.json()
+    );
+
+    const linkToken = response;
+
     setToken(linkToken);
+
+    console.log(linkToken);
     localStorage.setItem("linkToken", linkToken);
   }, [setToken]);
 
   const onSuccess = useCallback(async (publicToken) => {
-    await fetch("/api/exchange_public_token", {
+    console.log(typeof publicToken);
+    const response = await fetch("/.netlify/functions/exchange_public_token", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-      },
       body: JSON.stringify({ public_token: publicToken }),
-    });
-    getTransactions();
+    }).then((response) => response.json());
+
+    console.log(response);
   }, []);
 
-  const getTransactions = useCallback(async () => {
-    const response = await fetch("/api/get_transactions", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-      },
-    });
-    const { transArr: data } = await response.json();
+  // const getTransactions = useCallback(async () => {
+  //   const response = await fetch("/.netlify/functions/get_transactions", {
+  //     method: "GET",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       "Access-Control-Allow-Origin": "*",
+  //     },
+  //   });
+  //   const { transArr: data } = await response.json();
 
-    setTransactions(data);
-  }, []);
+  //   console.log(data);
+  //   setTransactions(data);
+  // }, []);
 
   const { open, ready } = usePlaidLink({
     token,
