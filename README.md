@@ -24,6 +24,7 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
+[![Netlify Status](https://api.netlify.com/api/v1/badges/66b1140a-f959-43d9-9b28-0c8e0ef9084d/deploy-status)](https://app.netlify.com/sites/gleeful-rugelach-161346/deploys)
 
 <!-- PROJECT LOGO -->
 <br />
