@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/personal-finance-app-web-js/static/css/main.ae3aa75f.css",
+    "main.js": "/personal-finance-app-web-js/static/js/main.cb8d6432.js",
+    "static/js/787.625bc9df.chunk.js": "/personal-finance-app-web-js/static/js/787.625bc9df.chunk.js",
+    "static/media/budgeting.png": "/personal-finance-app-web-js/static/media/budgeting.b2135ea7f2eaafe11fce.png",
+    "static/media/dashboard.svg": "/personal-finance-app-web-js/static/media/dashboard.fa376fa2e62b8a24f914ac7f65c5fd78.svg",
+    "static/media/settings.svg": "/personal-finance-app-web-js/static/media/settings.9466eb5bd51dd7e8530fd7bf6a81e2c5.svg",
+    "static/media/transactions.svg": "/personal-finance-app-web-js/static/media/transactions.c02248a236b0d45ce7a676240af5987d.svg",
+    "static/media/accounts.svg": "/personal-finance-app-web-js/static/media/accounts.eeb234808b8eab0474efeedf2d0c213f.svg",
+    "static/media/menu.svg": "/personal-finance-app-web-js/static/media/menu.aeccdc460750edf69d52d992ccc11e13.svg",
+    "index.html": "/personal-finance-app-web-js/index.html",
+    "main.ae3aa75f.css.map": "/personal-finance-app-web-js/static/css/main.ae3aa75f.css.map",
+    "main.cb8d6432.js.map": "/personal-finance-app-web-js/static/js/main.cb8d6432.js.map",
+    "787.625bc9df.chunk.js.map": "/personal-finance-app-web-js/static/js/787.625bc9df.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ae3aa75f.css",
+    "static/js/main.cb8d6432.js"
+  ]
+}
