@@ -1,7 +1,7 @@
 import React, { useEffect, useCallback, useState } from "react";
 
 export default function Home() {
-  const [res, setRes] = useState("");
+  const [res] = useState("");
   const hello = useCallback(async () => {
     const response = await fetch("/api/hello", {
       method: "POST",
@@ -10,7 +10,7 @@ export default function Home() {
       },
     });
     const { data } = await response.json();
-    setRes(data);
+    console.log(data);
   });
 
   useEffect(() => {
