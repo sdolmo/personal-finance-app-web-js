@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 export default function Home() {
   const hello = async () => {
@@ -12,7 +12,9 @@ export default function Home() {
     console.log(data);
   };
 
-  hello();
+  useEffect(() => {
+    hello();
+  }, []);
 
   return (
     <>
