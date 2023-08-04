@@ -1,6 +1,19 @@
 import React from "react";
 
 export default function Home() {
+  const hello = async () => {
+    const response = await fetch("/api/hello", {
+      method: "POST",
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
+    });
+    const data = await response.json();
+    console.log(data);
+  };
+
+  hello();
+
   return (
     <>
       <h2></h2>
