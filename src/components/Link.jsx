@@ -7,7 +7,7 @@ SimplePlaidLink.propTypes = {
 };
 
 export default function SimplePlaidLink({ setTransactions }) {
-  const [token, setToken] = useState(null);
+  const [token] = useState(null);
 
   const createLinkToken = async () => {
     const response = await fetch("/.netlify/functions/create_link_token").then(
