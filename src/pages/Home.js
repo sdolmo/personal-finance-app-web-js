@@ -1,7 +1,7 @@
 import React, { useEffect, useCallback, useState } from "react";
 
 export default function Home() {
-  const [res] = useState("");
+  const [res, setRes] = useState("");
   const hello = useCallback(async () => {
     const response = await fetch("/api/hello", {
       method: "POST",
@@ -9,8 +9,8 @@ export default function Home() {
         "Access-Control-Allow-Origin": "*",
       },
     });
-    const data = await response.json();
-    console.log(data);
+    const { data } = await response.json();
+    setRes(data);
   });
 
   useEffect(() => {
@@ -19,7 +19,7 @@ export default function Home() {
 
   return (
     <>
-      <h2></h2>
+      <h2>{res}</h2>
       <section id="banner"></section>
       <div className="container">
         <section className="box">
