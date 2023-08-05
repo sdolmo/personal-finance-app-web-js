@@ -24,27 +24,30 @@ export default function SimplePlaidLink({ setTransactions }) {
 
   const onSuccess = useCallback(async (publicToken) => {
     console.log(publicToken);
-    const response = await fetch("/.netlify/functions/exchange_public_token", {
+    await fetch("/.netlify/functions/exchange_public_token", {
       method: "POST",
       body: JSON.stringify({ public_token: publicToken }),
     }).then((response) => response.json());
 
-    console.log(response);
+    setTimeout(() => {
+      getTransactions();
+    }, 1000);
   }, []);
 
-  // const getTransactions = useCallback(async () => {
-  //   const response = await fetch("/.netlify/functions/get_transactions", {
-  //     method: "GET",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       "Access-Control-Allow-Origin": "*",
-  //     },
-  //   });
-  //   const { transArr: data } = await response.json();
+  const getTransactions = useCallback(async () => {
+    const response = await fetch("/.netlify/functions/get_transactions", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+    });
+    const data = await response.json();
+    const { body: allTransactions } = data;
 
-  //   console.log(data);
-  //   setTransactions(data);
-  // }, []);
+    console.log(allTransactions);
+    setTransactions(allTransactions);
+  }, []);
 
   const { open, ready } = usePlaidLink({
     token,
