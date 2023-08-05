@@ -14,12 +14,12 @@ export default function SimplePlaidLink({ setTransactions }) {
       (response) => response.json()
     );
 
-    const data = response;
+    const { linkToken } = response.body;
 
-    // setToken(linkToken);
+    setToken(linkToken);
 
-    console.log(data);
-    // localStorage.setItem("linkToken", linkToken);
+    console.log(linkToken);
+    localStorage.setItem("linkToken", linkToken);
   }, [setToken]);
 
   const onSuccess = useCallback(async (publicToken) => {

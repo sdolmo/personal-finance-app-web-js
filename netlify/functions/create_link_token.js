@@ -15,6 +15,13 @@ const PLAID_ENV = process.env.PLAID_ENV || "sandbox";
 const PLAID_PRODUCTS = process.env.PLAID_PRODUCTS.split(",");
 const PLAID_COUNTRY_CODES = process.env.PLAID_COUNTRY_CODES.split(",");
 
+console.log(typeof PLAID_CLIENT_ID);
+console.log(typeof PLAID_SECRET);
+console.log(typeof PLAID_ENV);
+console.log(typeof PLAID_PRODUCTS);
+console.log(typeof PLAID_COUNTRY_CODES);
+console.log(typeof process.env.APP_PORT);
+
 const config = new Configuration({
   basePath: PlaidEnvironments[PLAID_ENV],
   baseOptions: {
