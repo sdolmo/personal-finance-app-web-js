@@ -35,6 +35,8 @@
   <h3 align="center">Personal Finance App</h3>
 
   <p align="center">
+     <a href="https://personal-finance-application.netlify.app/">View Demo</a>
+    ·
     <a href="https://github.com/sdolmo/personal-finance-app-web-js/issues">Report Bug</a>
     ·
     <a href="https://github.com/sdolmo/personal-finance-app-web-js/issues">Request Feature</a>
@@ -144,7 +146,7 @@ Use the following credentials to connect to the sandbox environment:
 
 ### Use Live Demo
 
-To just use the live demo, you can use the following credentials:
+To just use the [live demo](https://personal-finance-application.netlify.app/), you can use the following credentials:
 
 1. Login using a name and email address
 2. Use the following credentials to connect to the sandbox environment:
@@ -175,7 +177,7 @@ To just use the live demo, you can use the following credentials:
 - [x] Code clean up
   - [x] Spending Component
   - [x] Remove Balances Page
-- [ ] Host on Netlify
+- [x] Host on Netlify 🎉
 
 See the [open issues](https://github.com/sdolmo/personal-finance-app-web-js/issues) for a full list of proposed features (and known issues).
 
