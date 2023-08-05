@@ -29,17 +29,21 @@ const client = new PlaidApi(config);
 const router = Router();
 
 router.post("/exchange_public_token", async (req, res) => {
-  const PUBLIC_TOKEN = req.body.public_token;
-  console.log(PUBLIC_TOKEN.toString());
+  const b = Buffer.from(req.body);
+  const { public_token: publicToken } = JSON.parse(b.toString());
 
   const request = {
-    public_token: PUBLIC_TOKEN,
+    public_token: publicToken,
   };
 
   try {
     const exchangeResponse = await client.itemPublicTokenExchange(request);
-    console.log(exchangeResponse);
-    res.json(true);
+    const ACCESS_TOKEN = exchangeResponse.data.access_token;
+    console.log(ACCESS_TOKEN);
+    res.json({
+      statusCode: 200,
+      body: true,
+    });
   } catch (error) {
     console.log(
       `An error occured during Plaid API call ${error.response.data.error_message}`

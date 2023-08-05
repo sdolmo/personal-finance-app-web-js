@@ -23,7 +23,7 @@ export default function SimplePlaidLink({ setTransactions }) {
   }, [setToken]);
 
   const onSuccess = useCallback(async (publicToken) => {
-    console.log(typeof publicToken);
+    console.log(publicToken);
     const response = await fetch("/.netlify/functions/exchange_public_token", {
       method: "POST",
       body: JSON.stringify({ public_token: publicToken }),
