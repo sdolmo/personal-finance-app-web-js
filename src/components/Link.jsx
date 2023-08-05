@@ -18,12 +18,10 @@ export default function SimplePlaidLink({ setTransactions }) {
 
     setToken(linkToken);
 
-    console.log(linkToken);
     localStorage.setItem("linkToken", linkToken);
   }, [setToken]);
 
   const onSuccess = useCallback(async (publicToken) => {
-    console.log(publicToken);
     await fetch("/.netlify/functions/exchange_public_token", {
       method: "POST",
       body: JSON.stringify({ public_token: publicToken }),
@@ -45,7 +43,6 @@ export default function SimplePlaidLink({ setTransactions }) {
     const data = await response.json();
     const { body: allTransactions } = data;
 
-    console.log(allTransactions);
     setTransactions(allTransactions);
   }, []);
 

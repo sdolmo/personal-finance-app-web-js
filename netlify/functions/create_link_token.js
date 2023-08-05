@@ -45,7 +45,6 @@ router.get("/create_link_token", async (req, res) => {
     const linkTokenData = tokenResponse.data;
     const linkToken = linkTokenData.link_token;
     process.env.TOKEN = linkToken;
-    console.log(process.env.TOKEN);
     res.send({
       statusCode: 200,
       body: { linkToken },

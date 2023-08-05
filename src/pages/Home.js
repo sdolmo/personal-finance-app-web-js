@@ -1,13 +1,6 @@
 import React from "react";
 
 export default function Home() {
-  const clicked = async () => {
-    const response = await fetch("/.netlify/functions/test").then((response) =>
-      response.json()
-    );
-    console.log(response);
-  };
-
   return (
     <>
       <h2></h2>
@@ -16,7 +9,6 @@ export default function Home() {
         <section className="box">
           <h3>Secure</h3>
           <p>Safely connect banking data by loging into your account</p>
-          <button onClick={clicked}>Click Me</button>
         </section>
         <section className="box">
           <h3>Transactions</h3>
