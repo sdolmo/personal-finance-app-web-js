@@ -1,6 +1,7 @@
 import * as dotenv from "dotenv";
 import bodyParser from "body-parser";
 import { Configuration, PlaidApi, PlaidEnvironments } from "plaid";
+import { exec } from "child_process";
 import express, { Router } from "express";
 import serverless from "serverless-http";
 dotenv.config();
@@ -38,8 +39,17 @@ router.post("/exchange_public_token", async (req, res) => {
 
   try {
     const exchangeResponse = await client.itemPublicTokenExchange(request);
-    const ACCESS_TOKEN = exchangeResponse.data.access_token;
-    console.log(ACCESS_TOKEN);
+    const token = exchangeResponse.data.access_token;
+
+    exec(`netlify env:set ACCESS_TOKEN ${token}`, (err, stdout, stderr) => {
+      if (err) {
+        console.error(err);
+      } else {
+        console.log(`stdout: ${stdout}`);
+        console.log(`stderr: ${stderr}`);
+      }
+    });
+
     res.json({
       statusCode: 200,
       body: true,
