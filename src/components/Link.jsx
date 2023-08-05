@@ -10,40 +10,40 @@ export default function SimplePlaidLink({ setTransactions }) {
   const [token, setToken] = useState(null);
 
   const createLinkToken = useCallback(async () => {
-    const response = await fetch("/api/create_link_token", {
-      method: "POST",
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-      },
-    });
-    const linkToken = await response.json();
+    const response = await fetch("/.netlify/functions/create_link_token").then(
+      (response) => response.json()
+    );
+
+    const { linkToken } = response.body;
+
     setToken(linkToken);
+
     localStorage.setItem("linkToken", linkToken);
   }, [setToken]);
 
   const onSuccess = useCallback(async (publicToken) => {
-    await fetch("/api/exchange_public_token", {
+    await fetch("/.netlify/functions/exchange_public_token", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-      },
       body: JSON.stringify({ public_token: publicToken }),
-    });
-    getTransactions();
+    }).then((response) => response.json());
+
+    setTimeout(() => {
+      getTransactions();
+    }, 1000);
   }, []);
 
   const getTransactions = useCallback(async () => {
-    const response = await fetch("/api/get_transactions", {
+    const response = await fetch("/.netlify/functions/get_transactions", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*",
       },
     });
-    const { transArr: data } = await response.json();
+    const data = await response.json();
+    const { body: allTransactions } = data;
 
-    setTransactions(data);
+    setTransactions(allTransactions);
   }, []);
 
   const { open, ready } = usePlaidLink({
