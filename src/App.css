@@ -249,7 +249,7 @@ table th {
     display: flex;
     flex-direction: row;
     align-items: baseline;
-    grid-row: 3 / 4;
+    grid-row: 4 / 4;
     grid-column: 1 / 5;
     gap: 1rem;
     margin: 5em auto;
