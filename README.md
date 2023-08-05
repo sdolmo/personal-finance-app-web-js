@@ -24,6 +24,7 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
+[![Netlify Status](https://api.netlify.com/api/v1/badges/66b1140a-f959-43d9-9b28-0c8e0ef9084d/deploy-status)](https://app.netlify.com/sites/personal-finance-application/deploys)
 
 <!-- PROJECT LOGO -->
 <br />
@@ -89,6 +90,7 @@ The main features provided are:
 - [![React][React.js]][React-url]
 - [![React-router][React-router]][React-router-url]
 - [![AG-Grid][AG-Grid]][AG-Grid-url]
+- [![Netlify][Netlify-badge]][Netlify-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -238,5 +240,7 @@ Project Link: [https://github.com/sdolmo/personal-finance-app-web-js](https://gi
 [React-router-url]: https://reactrouter.com/
 [AG-Grid]: https://img.shields.io/badge/AG_Grid-2B9348?style=for-the-badge&logo=ag-grid&logoColor=white
 [AG-Grid-url]: https://www.ag-grid.com/
+[Netlify-badge]: https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white
+[Netlify-url]: https://netlify.com
 
 <!-- [product-screenshot]: images/screenshot.png -->
