@@ -21,10 +21,15 @@ export default function Spending({ transactions }) {
     (mth) => `${latestYear}-${mth}`
   );
   const result = [];
-  for (const prefix of currentYearMonth) {
-    const data = latestYearData.filter((t) => t.date.includes(prefix));
-    const totalMthAmt = data.reduce((acc, t) => acc + t.amount, 0);
-    result.push({ prefix, amount: totalMthAmt });
+  for (const yearMonth of currentYearMonth) {
+    const data = latestYearData.filter((transaction) =>
+      transaction.date.includes(yearMonth)
+    );
+    console.log(data);
+    const totalMthAmt = data.reduce((acc, t) => {
+      return acc + t.amount;
+    }, 0);
+    result.push({ yearMonth, amount: totalMthAmt });
   }
 
   const [options] = useState({
@@ -38,7 +43,7 @@ export default function Spending({ transactions }) {
     series: [
       {
         type: "column",
-        xKey: "prefix",
+        xKey: "yearMonth",
         yKey: "amount",
       },
     ],
