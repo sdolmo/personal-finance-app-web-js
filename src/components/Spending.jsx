@@ -25,7 +25,6 @@ export default function Spending({ transactions }) {
     const data = latestYearData.filter((transaction) =>
       transaction.date.includes(yearMonth)
     );
-    console.log(data);
     const totalMthAmt = data.reduce((acc, t) => {
       return acc + t.amount;
     }, 0);
