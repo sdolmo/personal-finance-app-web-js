@@ -1,0 +1,39 @@
+.header {
+  height: 60vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.8),
+      rgb(40, 180, 133)
+    ),
+    url("../images/joshua-earle-AZzfPBQA1Bk-unsplash.jpg");
+  background-size: cover;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 40vh, 0% 100%);
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.header__text-box {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+}
+
+.header {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.header__main {
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+}
+
+.header__sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.75rem;
+  margin-bottom: 6rem;
+}

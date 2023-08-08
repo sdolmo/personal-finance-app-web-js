@@ -1,45 +1,55 @@
 :root {
-  --main-color: rgb(154, 220, 172);
   --aside-menu-background: #fefefe;
 }
-
+/* 
 * {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
 
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.header {
+  height: 95vh;
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75vh, 0% 100%);
+  position: relative;
+} */
+
 button {
   background-color: #ffff;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   border: none;
   padding: 0.5em 1em;
 }
 
-.logo h3 a {
+/* .logo h3 a {
   text-decoration: none;
   color: black;
-}
-
-#root {
-  /* background-color: #f2f2f2; */
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-}
+} */
 
 .icon {
-  width: 1.5rem;
-  height: 1.8rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 nav {
-  width: 100vw;
+  width: 90vw;
   height: 4.5rem;
   display: grid;
   position: sticky;
-  padding: 0 2rem;
   grid-template-rows: 1fr;
-  border-bottom: #979797 2px solid;
 }
 
 .nav-content {
@@ -76,6 +86,7 @@ nav {
   right: 4em;
   flex-direction: column;
   align-items: center;
+  z-index: 1;
 }
 
 .settings-menu h5 {
@@ -94,6 +105,7 @@ aside {
   width: 100vw;
   background-color: var(--aside-menu-background);
   z-index: 1;
+  left: -1rem;
 }
 
 aside ul .icon {
@@ -123,15 +135,6 @@ main {
 
 #date-selector {
   width: 20%;
-}
-
-#banner {
-  background-image: url("./images/budgeting.png");
-  background-position: center;
-  height: 32em;
-  width: 100%;
-  z-index: -1;
-  grid-row: 1;
 }
 
 /* Login */
@@ -202,6 +205,7 @@ table th {
     height: 100vh;
     width: 8vw;
     position: absolute;
+    left: -1rem;
   }
 
   aside ul {
@@ -215,11 +219,11 @@ table th {
     padding: 0 1rem;
   }
 
-  main {
+  /* main {
     display: flex;
     flex-direction: column;
     margin: 2rem 5rem;
-  }
+  } */
 
   #transactions {
     width: 35rem;
@@ -239,10 +243,6 @@ table th {
 
   main h2 {
     grid-row: 1;
-  }
-
-  #banner {
-    grid-column: 1 / 5;
   }
 
   .container {

@@ -33,13 +33,13 @@ export default function TransactionsTable({ transactions }) {
   );
 
   return (
-    <div id="transactions" className="ag-theme-alpine">
+    <section id="transactions-table" className="ag-theme-alpine">
       <AgGridReact
         ref={gridRef}
         rowData={rowData}
         columnDefs={columnDefs}
         defaultColDef={defaultColDef}
       ></AgGridReact>
-    </div>
+    </section>
   );
 }

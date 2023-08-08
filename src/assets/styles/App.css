@@ -1,0 +1,52 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.7;
+  padding: 3rem;
+  box-sizing: border-box;
+  background-color: #e0e0e0;
+}
+
+main {
+  height: 100vh;
+}
+
+.btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 1.6rem;
+  border: none;
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}

@@ -59,8 +59,12 @@ export default function SimplePlaidLink({ setTransactions }) {
 
   return (
     <>
-      <button onClick={() => open()} disabled={!ready}>
-        Connect Link
+      <button
+        className="btn btn-white"
+        onClick={() => open()}
+        disabled={!ready}
+      >
+        Link Account
       </button>
     </>
   );

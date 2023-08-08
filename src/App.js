@@ -9,8 +9,11 @@ import ProtectedRoute from "./pages/ProtectedRoute";
 import Accounts from "./pages/Accounts";
 import Balances from "./pages/Balances";
 import Transactions from "./pages/Transactions";
+import Settings from "./pages/Settings.js";
 
 import { UserContext, MenuContext, TransactionsDataContext } from "./Context";
+
+// import "./assets/styles/_App.css";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -53,6 +56,14 @@ function App() {
                         user={user}
                         setTransactions={setTransactions}
                       />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="settings"
+                  element={
+                    <ProtectedRoute user={user}>
+                      <Settings user={user} setUser={setUser} />
                     </ProtectedRoute>
                   }
                 />

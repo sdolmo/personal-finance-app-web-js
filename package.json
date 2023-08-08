@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-regular-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@netlify/functions": "^1.6.0",
     "@tanstack/react-table": "^8.7.9",
     "@testing-library/jest-dom": "^5.16.5",
@@ -13,6 +17,7 @@
     "ag-charts-react": "^8.0.6",
     "ag-grid-community": "^30.0.5",
     "ag-grid-react": "^30.0.5",
+    "babel-plugin-macros": "^3.1.0",
     "body-parser": "^1.20.2",
     "child_process": "^1.0.2",
     "dotenv": "^16.3.1",
