@@ -1,61 +1,74 @@
-import React, { useState, useContext } from "react";
-import PropTypes from "prop-types";
+import React from "react";
+// import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import Icons from "../icons";
-import Settings from "./Settings";
-import { UserContext, MenuContext } from "../Context";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faScaleBalanced } from "@fortawesome/free-solid-svg-icons";
+// import Icons from "../icons";
+// import Settings from "./Settings";
+// import { UserContext, MenuContext } from "../Context";
 
-// import "../assets/styles/Nav.css";
+import "../assets/styles/Nav.css";
 
-Nav.propTypes = {
-  setMenu: PropTypes.func,
-  setUser: PropTypes.func,
-};
+const menuItems = [
+  { key: "accounts", name: "Accounts", link: "/accounts" },
+  { key: "transactions", name: "Transactions", link: "/transactions" },
+  { key: "settings", name: "Settings", link: "/settings" },
+];
 
-export default function Nav({ setUser, setMenu }) {
-  const user = useContext(UserContext);
-  const menu = useContext(MenuContext);
-  const [visible, setVisible] = useState(false);
+// Nav.propTypes = {
+//   setMenu: PropTypes.func,
+//   setUser: PropTypes.func,
+// };
 
-  const handleClick = () => {
-    setVisible(!visible);
-  };
+export default function Nav({}) {
+  // const user = useContext(UserContext);
+  // const menu = useContext(MenuContext);
+  // const [visible, setVisible] = useState(false);
 
-  const showMenu = () => {
-    setMenu(!menu);
-  };
+  // const handleClick = () => {
+  //   setVisible(!visible);
+  // };
+
+  // const showMenu = () => {
+  //   setMenu(!menu);
+  // };
 
   return (
     <>
-      <nav>
-        <ul className="nav-content">
-          <li className="menu">
+      <nav className="nav">
+        <Link className="logo" to="/">
+          <FontAwesomeIcon icon={faScaleBalanced} />
+        </Link>
+
+        <ul className="nav-menu">
+          {menuItems.map((item) => (
+            <Link className="nav-menu-item" key={item.settings} to={item.link}>
+              {item.name}
+            </Link>
+          ))}
+          {/* <li className="menu">
             {user ? (
               <button className="icon-menu" onClick={showMenu}>
                 <img className="icon" src={Icons.menu} alt="menu" />
               </button>
             ) : null}
-          </li>
-          <li className="logo">
-            <h3>
-              <Link to="/"></Link>
-            </h3>
-          </li>
-          <li className="settings">
+          </li> */}
+          {/* <li className="settings">
             <button onClick={handleClick}>
               <img className="icon" src={Icons.settings} alt="settings" />
             </button>
-          </li>
+          </li> */}
         </ul>
       </nav>
-      {visible ? (
+
+      {/* {visible ? (
         <Settings
           setSettings={setVisible}
           setMenu={setMenu}
           setUser={setUser}
           user={user}
         />
-      ) : null}
+      ) : null} */}
     </>
   );
 }

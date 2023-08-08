@@ -12,7 +12,7 @@ import Transactions from "./pages/Transactions";
 
 import { UserContext, MenuContext, TransactionsDataContext } from "./Context";
 
-import "./assets/styles/_App.css";
+// import "./assets/styles/_App.css";
 
 function App() {
   const [user, setUser] = useState(null);

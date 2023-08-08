@@ -9,7 +9,6 @@ export default function Transactions() {
 
   return (
     <>
-      <h2>Transactions Page</h2>
       <Distribution transactions={data} />
       <Spending transactions={data} />
       <TransactionsTable transactions={data} />

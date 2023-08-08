@@ -1,0 +1,25 @@
+.nav {
+  font-size: 2rem;
+  font-weight: 200;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.nav a:visited,
+.nav a:link {
+  text-decoration: none;
+  color: #686868;
+}
+
+.nav .logo {
+  font-size: 3rem;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
