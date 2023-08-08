@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "../components/Link";
 import PropTypes from "prop-types";
+import Header from "../components/Header";
 
 Accounts.propTypes = {
   setTransactions: PropTypes.func,
@@ -8,9 +9,14 @@ Accounts.propTypes = {
 
 export default function Accounts({ setTransactions }) {
   return (
-    <section>
-      <h2>Accounts Page</h2>
-      <Link setTransactions={setTransactions} />
-    </section>
+    <>
+      <Header
+        heading="Accounts"
+        subHeading="Connect your account to view transactions"
+      />
+      <section>
+        <Link setTransactions={setTransactions} />
+      </section>
+    </>
   );
 }

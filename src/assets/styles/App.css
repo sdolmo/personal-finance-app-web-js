@@ -36,6 +36,11 @@ main {
   border: none;
 }
 
+.btn-white {
+  background-color: #fff;
+  color: #777;
+}
+
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);

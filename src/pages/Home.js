@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../components/Header";
+import Hero from "../components/Hero";
 import Card from "../components/Card";
 import "../assets/styles/Home.css";
 
@@ -28,7 +28,7 @@ const features = [
 export default function Home() {
   return (
     <div className="home">
-      <Header heading="Budgeting" subHeading="made easy" />
+      <Hero heading="Budgeting" subHeading="made easy" />
       <div className="features__container">
         <div className="features">
           {features.map((feature) => (

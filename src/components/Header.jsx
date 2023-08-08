@@ -12,10 +12,10 @@ export default function Header({ heading, subHeading }) {
     <>
       <header className="header">
         <div className="header__text-box">
-          <div className="heading">
+          <div className="header">
             <h1>
-              <span className="heading__main">{heading}</span>
-              <span className="heading__sub">{subHeading}</span>
+              <span className="header__main">{heading}</span>
+              <span className="header__sub">{subHeading}</span>
             </h1>
           </div>
         </div>

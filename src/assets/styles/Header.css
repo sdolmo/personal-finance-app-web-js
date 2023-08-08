@@ -1,5 +1,5 @@
 .header {
-  height: 95vh;
+  height: 60vh;
   background-image: linear-gradient(
       to right bottom,
       rgba(126, 213, 111, 0.8),
@@ -7,73 +7,33 @@
     ),
     url("../images/joshua-earle-AZzfPBQA1Bk-unsplash.jpg");
   background-size: cover;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 75vh, 0% 100%);
-  position: relative;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 40vh, 0% 100%);
   margin-bottom: 3rem;
+  position: relative;
 }
 
 .header__text-box {
   position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  top: 20%;
+  left: 5%;
 }
 
-.heading {
+.header {
   color: #fff;
   text-transform: uppercase;
 }
 
-@keyframes moveLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem);
-  }
-
-  80% {
-    transform: translateX(1rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-.heading__main {
+.header__main {
   display: block;
   font-size: 6rem;
   font-weight: 400;
   letter-spacing: 3.5rem;
-
-  animation-name: moveLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-out;
 }
 
-@keyframes moveRight {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem);
-  }
-
-  80% {
-    transform: translateX(-1rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-.heading__sub {
+.header__sub {
   display: block;
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 1.75rem;
   margin-bottom: 6rem;
-
-  animation: moveRight 1s ease-out;
 }
