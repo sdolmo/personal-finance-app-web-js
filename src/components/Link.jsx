@@ -64,7 +64,7 @@ export default function SimplePlaidLink({ setTransactions }) {
         onClick={() => open()}
         disabled={!ready}
       >
-        Connect Link
+        Link Account
       </button>
     </>
   );

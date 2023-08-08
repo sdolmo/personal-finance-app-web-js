@@ -1,0 +1,25 @@
+.settings {
+  display: flex;
+  justify-content: center;
+  margin-top: 6%;
+  height: 90%;
+  column-count: 3;
+  font-size: 1.5rem;
+}
+
+.settings h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.settings-container {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 70%;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}

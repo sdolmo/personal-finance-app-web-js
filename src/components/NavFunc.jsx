@@ -17,7 +17,6 @@ NavFunc.propTypes = {
 
 export default function NavFunc() {
   const user = useContext(UserContext);
-  console.log(user);
   const menu = !user ? loggedOutMenuItems : loggedInMenuItems;
 
   return (
