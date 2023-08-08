@@ -1,0 +1,54 @@
+.login {
+  display: flex;
+  justify-content: center;
+  margin-top: 6%;
+  height: 90%;
+  column-count: 3;
+  font-size: 1.5rem;
+}
+
+.login h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.login-form {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 70%;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.login-form label {
+  width: 70%;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 0s 600000s, color 0s 600000s;
+}
+
+.login-form input {
+  margin: auto;
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: inherit;
+  padding: 1.5rem 1rem;
+  border-radius: 2px;
+  background-color: rbga(#fff, 0.5);
+  border: none;
+  border-bottom: 2px solid transparent;
+  width: 90%;
+  display: block;
+  transition: all 0.3s;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-bottom: 3px solid green;
+}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
+import "../assets/styles/Login.css";
 
 Login.propTypes = {
   setUser: PropTypes.func,
@@ -22,24 +23,32 @@ export default function Login({ setUser }) {
   return (
     <section className="login">
       <form className="login-form" onSubmit={handleSubmit}>
-        <h3>Login</h3>
-        <label htmlFor="name">Name</label>
-        <input
-          id="name"
-          type="text"
-          name="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <label htmlFor="email">Email</label>
-        <input
-          id="email"
-          type="text"
-          name="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <button type="submit">Login</button>
+        <h2>Login</h2>
+        <label htmlFor="name">
+          <input
+            id="name"
+            type="text"
+            name="name"
+            placeholder="Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </label>
+
+        <label htmlFor="email">
+          <input
+            id="email"
+            type="text"
+            name="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </label>
+
+        <button className="btn" type="submit">
+          Login
+        </button>
       </form>
     </section>
   );

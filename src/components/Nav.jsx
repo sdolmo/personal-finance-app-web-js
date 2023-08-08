@@ -1,5 +1,5 @@
 import React from "react";
-// import PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faScaleBalanced } from "@fortawesome/free-solid-svg-icons";
@@ -9,18 +9,17 @@ import { faScaleBalanced } from "@fortawesome/free-solid-svg-icons";
 
 import "../assets/styles/Nav.css";
 
-const menuItems = [
-  { key: "accounts", name: "Accounts", link: "/accounts" },
-  { key: "transactions", name: "Transactions", link: "/transactions" },
-  { key: "settings", name: "Settings", link: "/settings" },
-];
+// const menuItems = [
+//   { key: "accounts", name: "Accounts", link: "/accounts" },
+//   { key: "transactions", name: "Transactions", link: "/transactions" },
+//   { key: "settings", name: "Settings", link: "/settings" },
+// ];
 
-// Nav.propTypes = {
-//   setMenu: PropTypes.func,
-//   setUser: PropTypes.func,
-// };
+Nav.propTypes = {
+  menuContent: PropTypes.array,
+};
 
-export default function Nav({}) {
+export default function Nav({ menuContent }) {
   // const user = useContext(UserContext);
   // const menu = useContext(MenuContext);
   // const [visible, setVisible] = useState(false);
@@ -41,7 +40,7 @@ export default function Nav({}) {
         </Link>
 
         <ul className="nav-menu">
-          {menuItems.map((item) => (
+          {menuContent.map((item) => (
             <Link className="nav-menu-item" key={item.settings} to={item.link}>
               {item.name}
             </Link>

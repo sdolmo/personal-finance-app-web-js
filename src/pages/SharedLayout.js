@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import { Outlet } from "react-router-dom";
-import Nav from "../components/Nav";
+import NavFunc from "../components/NavFunc";
 import MenuList from "../components/MenuList";
 import { MenuContext } from "../Context";
 
@@ -14,7 +14,7 @@ export default function SharedLayout({ setUser, setMenu }) {
   const menu = useContext(MenuContext);
   return (
     <>
-      <Nav setMenu={setMenu} setUser={setUser} />
+      <NavFunc />
       {menu ? <MenuList /> : null}
       <main>
         <Outlet />
