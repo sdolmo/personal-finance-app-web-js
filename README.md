@@ -73,7 +73,7 @@
 
 ## About The Project
 
-<img src="./src/images/personal-finance-app.png" />
+<img src="./src/assets/images/personal-finance-app.png" />
 
 The Personal Finance Application allows users to view and monitor transactions associated with their accounts.
 
